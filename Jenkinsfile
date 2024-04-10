@@ -4,7 +4,7 @@ pipeline {
        stage("Generating OIDC token and saving it to a file") {
             steps {
                 script {
-                        sh (script: 'gcloud auth print-identity-token default-one@use-case-416807.iam.gserviceaccount.com  --audiences="//iam.googleapis.com/projects/493585028974/locations/global/workloadIdentityPools/jenkins"  > /usr/share/token/key',returnStdout: true)
+                        sh (script: 'gcloud auth print-identity-token default-one@use-case-416807.iam.gserviceaccount.com  --audiences="//iam.googleapis.com/projects/493585028974/locations/global/workloadIdentityPools/jenkins"  > /usr/share/token/credential.key',returnStdout: true)
                 }
             }
         }
